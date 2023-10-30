@@ -28,7 +28,7 @@ public class MemberController {
         model.addAttribute("memberList", Group.members);
         model.addAttribute("newMember", new Member(name, rank, species, contact));
         Group.addMember(name, rank, species, contact);
-        return "add-member";
+        return "redirect:/add-member";
     }
 
     
