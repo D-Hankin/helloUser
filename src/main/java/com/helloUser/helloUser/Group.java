@@ -5,15 +5,15 @@ import java.util.ArrayList;
 public class Group {
     
     private String groupName;
-    ArrayList<Member> members;
+    static ArrayList<Member> members;
 
     public Group(String groupName) {
 
         this.groupName = groupName;
-        this.members = new ArrayList<>();
+        Group.members = new ArrayList<>();
     }
 
-    public void addMember(String name, String rank, String species, String contact) {
+    public static void addMember(String name, String rank, String species, String contact) {
         members.add(new Member(name, rank, species, contact));
     }
 
@@ -30,7 +30,7 @@ public class Group {
     }
 
     public void setMembers(ArrayList<Member> members) {
-        this.members = members;
+        Group.members = members;
     }
 
     

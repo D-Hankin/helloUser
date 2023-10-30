@@ -9,13 +9,17 @@
 </head>
 <body>
     <a th:href="@{/}">Home</a>
-    <h1>Add new Master of Kneedle</h1>
-    <form>
-        Name:<input type="text"><br>
-        Rank: <input type="text"><br>
-        Species: <input type="text"><br>
-        Contact: <input type="text"><br>
-        <button>Retrieve Soul</button>
+    <h1>Add new Master of Needle</h1>
+    <form method="post" th:action="@{/add-member/add}" th:object="${newMember}">
+        Name: 
+        <input type="text" th:field="*{name}">
+        Rank: 
+        <input type="text" th:field="*{rank}">
+        Species: 
+        <input type="text" th:field="*{species}">
+        Contact: 
+        <input type="text" th:field="*{contact}">
+        <input type="submit">
     </form>
     <footer>@copy 2023. All rights reserved. Under the protection of The Intergalactic Needle and Wool Union.</footer>
 </body>
