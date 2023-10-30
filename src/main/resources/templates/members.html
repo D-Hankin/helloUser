@@ -8,6 +8,7 @@
     <title>NWO - Members Page</title>
 </head>
 <body>
+    <a th:href="@{/}">Home</a>
     <h1>Current Members</h1>
     <table>
         <tr>
@@ -17,10 +18,15 @@
             <th>Contact</th>
             <th>Adjust membership</th>
         </tr>
-        <tr>
-            <th>Insert thymeleaf for loop here for members list</th>
+        <tr th:each="member : ${membersList}">
+            <td><span th:text="${member.name}"></span></td>
+            <td><span th:text="${member.rank}"></span></td>
+            <td><span th:text="${member.species}"></span></td>
+            <td><span th:text="${member.contact}"></span></td>
+            <td><span>Dispose</span></td>
         </tr>
     </table>
-    <footer>@copy 2023. All rights reserved under the protection of The Intergalactic Needle and Wool Union.</footer>
+    
+    <footer>@copy 2023. All rights reserved. Under the protection of The Intergalactic Needle and Wool Union.</footer>
 </body>
 </html>

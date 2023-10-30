@@ -17,8 +17,11 @@
         <input type="text">
         <button>Log in</button>
     </form>
-    <nav>Current members / Add new Member</nav>
+    <nav>
+        <a th:href="@{/members}">Current Members</a>
+        <a th:href="@{/add-member}">Add New Member</a>
+    </nav>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi dignissimos cumque minima ducimus unde aut veniam in ipsam voluptatum aliquam temporibus, nemo, aliquid eius ea laudantium tempore accusantium natus! Neque.</p>
-    <footer>@copy 2023. All rights reserved under the protection of The Intergalactic Needle and Wool Union.</footer>
+    <footer>@copy 2023. All rights reserved. Under the protection of The Intergalactic Needle and Wool Union.</footer>
 </body>
 </html>
