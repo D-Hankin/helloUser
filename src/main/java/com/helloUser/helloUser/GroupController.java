@@ -8,15 +8,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 public class GroupController {
 
+    public static Group group = new Group("NWO Knitting Circle");
+
     @GetMapping("/")
-    String getIndex() {
+    String getIndex(Model model) {
+
+        model.addAttribute("members", Group.members);
+
         return "index";
     }
-
-    @GetMapping("/members")
-    String showMembers(Model model) {
-        model.addAttribute("membersList", HelloUserApplication.group.members);
-        return "members";
-    }
+       
     
 }
