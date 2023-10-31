@@ -4,27 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
-    <script src="script.js" defer></script>
+    <script src="scriptMembers.js" defer></script>
     <title>NWO - Members Page</title>
 </head>
 <body>
     <a th:href="@{/}">Home</a>
     <h1>Current Members</h1>
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Rank</th>
-            <th>Species</th>
-            <th>Contact Method</th>
-            <th>Adjust membership</th>
-        </tr>
-        <tr th:each="member : ${membersList}">
-            <td><span th:text="${member.name}"></span></td>
-            <td><span th:text="${member.rank}"></span></td>
-            <td><span th:text="${member.species}"></span></td>
-            <td><span th:text="${member.contact}"></span></td>
-            <td><a th:href="@{/remove-member/{memberId}(memberId=${member.id})}"><img src="skullicon.png"></a></td>
-        </tr>
+    <table id="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Rank</th>
+                <th>Species</th>
+                <th>Contact Method</th>
+                <th>Adjust membership (admin only)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:id="${member.id}" th:each="member : ${membersList}">
+                <td><span th:text="${member.name}"></span></td>
+                <td><span th:text="${member.rank}"></span></td>
+                <td><span th:text="${member.species}"></span></td>
+                <td><span th:text="${member.contact}"></span></td>
+                <td><a th:href="@{/remove-member/{memberId}(memberId=${member.id})}"><img id="skullIcon" th:src="skullIcon.png"></a><img id="noEntry" th:src="noEntry.png"></td>
+            </tr>
+        </tbody>
     </table>
     
     <footer>@copy 2023. All rights reserved. Under the protection of The Intergalactic Needle and Wool Union.</footer>
