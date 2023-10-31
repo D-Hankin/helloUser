@@ -8,7 +8,11 @@
     <title>NWO - Members Page</title>
 </head>
 <body>
-    <a th:href="@{/}">Home</a>
+    <nav>
+        <a th:href="@{/}">Home</a>
+        <a id="addMemberLink" th:href="@{/add-member}">Add New Member</a>
+    </nav>
+    <div><img id="logo" src="logo.png"></div>
     <h1>Current Members</h1>
     <table id="table">
         <thead>
@@ -26,7 +30,7 @@
                 <td><span th:text="${member.rank}"></span></td>
                 <td><span th:text="${member.species}"></span></td>
                 <td><span th:text="${member.contact}"></span></td>
-                <td><a th:href="@{/remove-member/{memberId}(memberId=${member.id})}"><img id="skullIcon" th:src="skullIcon.png"></a><img id="noEntry" th:src="noEntry.png"></td>
+                <td><a th:href="@{/remove-member/{memberId}(memberId=${member.id})}"><img class="skullIcon" th:src="skullIcon.png"></a><img class="noEntry" th:src="noEntry.png"></td>
             </tr>
         </tbody>
     </table>

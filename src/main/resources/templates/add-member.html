@@ -8,6 +8,11 @@
     <title>NWO - Add Member</title>
 </head>
 <body>
+    <nav>
+        <a th:href="@{/}">Home</a>
+        <a id="addMemberLink" th:href="@{/members}">Current Members</a>
+    </nav>
+    <div><img id="logo" src="logo.png"></div>
     <a th:href="@{/}">Home</a>
     <h1>Add new Master of Needle</h1>
     <form method="post" th:action="@{/add-member/add}" th:object="${newMember}">

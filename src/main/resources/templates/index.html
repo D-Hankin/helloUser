@@ -8,6 +8,11 @@
     <title>NWO - Home</title>
 </head>
 <body>
+    <nav>
+        <a th:href="@{/members}">Current Members</a>
+        <a id="addMemberLink" th:href="@{/add-member}">Add New Member</a>
+    </nav>
+    <div><img id="logo" src="logo.png"></div>
     <h1>Welcome to the New World Order Monday Night Knitting Circle!</h1>
     <form>
         Administrator Log in<br>
@@ -18,10 +23,6 @@
         <button id="loginBtn">Log in</button>
         <button id="logOutBtn">Log out</button>
     </form>
-    <nav>
-        <a th:href="@{/members}">Current Members</a>
-        <a id="addMemberLink" th:href="@{/add-member}">Add New Member</a>
-    </nav>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi dignissimos cumque minima ducimus unde aut veniam in ipsam voluptatum aliquam temporibus, nemo, aliquid eius ea laudantium tempore accusantium natus! Neque.</p>
     <footer>@copy 2023. All rights reserved. Under the protection of The Intergalactic Needle and Wool Union.</footer>
 </body>

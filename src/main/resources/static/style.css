@@ -1,0 +1,19 @@
+body {
+    background-image: url("eclipse.jpg");
+    background-repeat: no-repeat;
+}
+h1 {
+    color: white;
+    text-align: center;
+}
+table {
+    color: white;
+    text-align: center;
+}
+#banner {
+    width: 100%;
+    margin: auto;
+}
+#logo {
+    
+}
