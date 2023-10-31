@@ -12,13 +12,13 @@
     <h1>Add new Master of Needle</h1>
     <form method="post" th:action="@{/add-member/add}" th:object="${newMember}">
         Name: 
-        <input type="text" th:field="*{name}">
+        <input type="text" th:field="*{name}"><br>
         Rank: 
-        <input type="text" th:field="*{rank}">
+        <input type="text" th:field="*{rank}"><br>
         Species: 
-        <input type="text" th:field="*{species}">
-        Contact: 
-        <input type="text" th:field="*{contact}">
+        <input type="text" th:field="*{species}"><br>
+        Contact Method: 
+        <input type="text" th:field="*{contact}"><br>
         <input type="submit">
     </form>
     <footer>@copy 2023. All rights reserved. Under the protection of The Intergalactic Needle and Wool Union.</footer>

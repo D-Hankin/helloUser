@@ -13,8 +13,8 @@ public class Group {
         Group.members = new ArrayList<>();
     }
 
-    public static void addMember(String name, String rank, String species, String contact) {
-        members.add(new Member(name, rank, species, contact));
+    public static void addMember(String name, String rank, String species, String contact, int id) {
+        members.add(new Member(name, rank, species, contact, id));
     }
 
     public String getGroupName() {
