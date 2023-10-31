@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
-    <script src="script.js" defer></script>
+    <script src="scriptIndex.js" defer></script>
     <title>NWO - Home</title>
 </head>
 <body>
@@ -16,10 +16,11 @@
         Password: 
         <input type="text" id="password">
         <button id="loginBtn">Log in</button>
+        <button id="logOutBtn">Log out</button>
     </form>
     <nav>
         <a th:href="@{/members}">Current Members</a>
-        <a th:href="@{/add-member}">Add New Member</a>
+        <a id="addMemberLink" th:href="@{/add-member}">Add New Member</a>
     </nav>
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi dignissimos cumque minima ducimus unde aut veniam in ipsam voluptatum aliquam temporibus, nemo, aliquid eius ea laudantium tempore accusantium natus! Neque.</p>
     <footer>@copy 2023. All rights reserved. Under the protection of The Intergalactic Needle and Wool Union.</footer>
