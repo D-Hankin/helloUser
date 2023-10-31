@@ -1,15 +1,19 @@
 const usernameInput = document.getElementById("username");
 const passwordInput = document.getElementById("password");
 const loginBtn = document.getElementById("loginBtn");
-let loggedInCheck = localStorage.getItem("username");
+let loggedInCheck = localStorage.getItem("username") + localStorage.getItem("password");
 const addMemberLink = document.getElementById("addMemberLink");
+const logOutBtn = document.getElementById("logOutBtn");
 
-if (loggedInCheck != "admin") {
+if (loggedInCheck != "adminadmin") {
     addMemberLink.style.display="none";
+    logOutBtn.disabled="true";
+}
+else {
+    loginBtn.disabled="true";
 }
 
 loginBtn.addEventListener("click", (e) => {
-    console.log("click");
     e.preventDefault();
 
     let username = usernameInput.value;
@@ -19,7 +23,6 @@ loginBtn.addEventListener("click", (e) => {
         alert("Welcome back Overlord.");
         localStorage.setItem("username", username)
         localStorage.setItem("password", password);
-        console.log("successful log in.")
         location.reload();
     }
     else {
@@ -27,11 +30,8 @@ loginBtn.addEventListener("click", (e) => {
     }
 })
 
-const logOutBtn = document.getElementById("logOutBtn");
-
 logOutBtn.addEventListener("click", (e) => {
-    console.log("click");
     e.preventDefault();
     localStorage.clear();
-    location.replace(location.href);
+    location.reload();
 })
