@@ -6,12 +6,23 @@ public class Member {
     private String rank;
     private String species;
     private String contact;
+    private int id;
 
-    public Member(String name, String rank, String species, String contact) {
+    public Member(String name, String rank, String species, String contact, int id) {
         this.name = name;
         this.rank = rank;
         this.species = species;
         this.contact = contact;
+        this.id = id;
+
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
