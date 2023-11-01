@@ -16,9 +16,7 @@ public class GroupController {
 
     @GetMapping("/")
     String getIndex(Model model) {
-
         model.addAttribute("members", Group.members);
-
         return "index";
     }
        

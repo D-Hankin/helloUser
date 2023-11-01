@@ -27,7 +27,7 @@ loginBtn.addEventListener("click", (e) => {
         location.replace(location.href="/");
     }
     else {
-        alert("YOU may not enter.")
+        alert("YOU may not enter.");
     }
 })
 

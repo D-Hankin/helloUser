@@ -14,6 +14,7 @@ public class MemberController {
     @GetMapping("/members")
     String showMembers(Model model) {
         model.addAttribute("membersList", Group.members);
+        
         return "members";
     }
 
@@ -21,6 +22,7 @@ public class MemberController {
     String addMemberPage(Model model) {
         model.addAttribute("membersList", Group.members);
         model.addAttribute("newMember", new Member(null, null, null, null, 0));
+
         return "add-member";
     }
 
@@ -31,6 +33,7 @@ public class MemberController {
         model.addAttribute("memberList", Group.members);
         model.addAttribute("newMember", new Member(null, null, null, null, 0));
         Group.addMember(name, rank, species, contact, Group.members.size() + 1);
+
         return "redirect:/add-member";
     }
 
