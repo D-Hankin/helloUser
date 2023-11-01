@@ -7,34 +7,46 @@
     <script src="scriptMembers.js" defer></script>
     <title>NWO - Members Page</title>
 </head>
-<body>
-    <nav>
-        <a th:href="@{/}">Home</a>
-        <a id="addMemberLink" th:href="@{/add-member}">Add New Member</a>
+<body id="body">
+    <nav class="menu">
+        <a class="links" th:href="@{/}">Home</a>
+        <a class="links" id="addMemberLink" th:href="@{/add-member}">Add New Member</a>
     </nav>
+    <div class="logOutBtnContainer">
+        <button id="logOutBtnMembers">Log out</button>
+    </div>
     <div><img id="logo" src="logo.png"></div>
-    <h1>Current Members</h1>
-    <table id="table">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Rank</th>
-                <th>Species</th>
-                <th>Contact Method</th>
-                <th>Adjust membership (admin only)</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr th:id="${member.id}" th:each="member : ${membersList}">
-                <td><span th:text="${member.name}"></span></td>
-                <td><span th:text="${member.rank}"></span></td>
-                <td><span th:text="${member.species}"></span></td>
-                <td><span th:text="${member.contact}"></span></td>
-                <td><a th:href="@{/remove-member/{memberId}(memberId=${member.id})}"><img class="skullIcon" th:src="skullIcon.png"></a><img class="noEntry" th:src="noEntry.png"></td>
-            </tr>
-        </tbody>
-    </table>
-    
+    <div class="mainHeader">
+        <h1>Current Members</h1>
+    </div>
+    <div id="tableContainer">
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Rank</th>
+                    <th>Species</th>
+                    <th>Contact Method</th>
+                    <th>Adjust membership (admin only)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:id="${member.id}" th:each="member : ${membersList}">
+                    <td><span th:text="${member.name}"></span></td>
+                    <td><span th:text="${member.rank}"></span></td>
+                    <td><span th:text="${member.species}"></span></td>
+                    <td><span th:text="${member.contact}"></span></td>
+                    <td><a id="removeBtn" th:href="@{/remove-member/{memberId}(memberId=${member.id})}">
+                            <div id="skullIconContainer">
+                                <img class="skullIcon" th:src="skullIcon.png">
+                            </div>
+                        </a>
+                        <img class="noEntry" th:src="noEntry.png">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
     <footer>@copy 2023. All rights reserved. Under the protection of The Intergalactic Needle and Wool Union.</footer>
 </body>
 </html>
