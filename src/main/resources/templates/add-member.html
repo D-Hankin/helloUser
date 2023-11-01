@@ -4,28 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
-    <script src="script.js" defer></script>
+    <script src="scriptMembers.js" defer></script>
     <title>NWO - Add Member</title>
 </head>
-<body>
-    <nav>
-        <a th:href="@{/}">Home</a>
-        <a id="addMemberLink" th:href="@{/members}">Current Members</a>
+<body id="body">
+    <nav class="menu">
+        <a class="links" th:href="@{/}">Home</a>
+        <a class="links" id="addMemberLink" th:href="@{/members}">Current Members</a>
     </nav>
+    <div class="logOutBtnContainer">
+        <button id="logOutBtnMembers">Log out</button>
+    </div>
     <div><img id="logo" src="logo.png"></div>
-    <a th:href="@{/}">Home</a>
-    <h1>Add new Master of Needle</h1>
-    <form method="post" th:action="@{/add-member/add}" th:object="${newMember}">
-        Name: 
-        <input type="text" th:field="*{name}"><br>
-        Rank: 
-        <input type="text" th:field="*{rank}"><br>
-        Species: 
-        <input type="text" th:field="*{species}"><br>
-        Contact Method: 
-        <input type="text" th:field="*{contact}"><br>
-        <input type="submit">
-    </form>
+    <div class="mainHeader">
+        <h1>Add New Contendor</h1>
+    </div>
+    <div id="addNewMemberFormContainer">
+        <form id="addNewMemberForm" method="post" th:action="@{/add-member/add}" th:object="${newMember}">
+            <label class="formContents">Name:</label> 
+            <input type="text" th:field="*{name}"><br>
+            <label class="formContents">Rank:</label>
+            <select th:field="*{rank}">
+                <option value=""> </option>
+                <option value="Threadless">Threadless</option>
+                <option value="One Needle Short">One Needle Short</option>
+                <option value="Needle Ninja">Needle Ninja</option>
+                <option value="Master of Yarn">Master of Yarn</option>
+            </select>
+            <label class="formContents">Species:</label>
+            <input type="text" th:field="*{species}"><br>
+            <label class="formContents">Contact Method:</label> 
+            <input type="text" th:field="*{contact}"><br>
+            <button>Collect Soul</button>
+        </form>
+    </div>
     <footer>@copy 2023. All rights reserved. Under the protection of The Intergalactic Needle and Wool Union.</footer>
 </body>
 </html>

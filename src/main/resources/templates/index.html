@@ -7,23 +7,30 @@
     <script src="scriptIndex.js" defer></script>
     <title>NWO - Home</title>
 </head>
-<body>
-    <nav>
-        <a th:href="@{/members}">Current Members</a>
-        <a id="addMemberLink" th:href="@{/add-member}">Add New Member</a>
+<body id="body">
+    <nav class="menu">
+        <a class="links" th:href="@{/members}">Current Members</a>
+        <a class="links" id="addMemberLink" th:href="@{/add-member}">Add New Member</a>
     </nav>
-    <div><img id="logo" src="logo.png"></div>
-    <h1>Welcome to the New World Order Monday Night Knitting Circle!</h1>
-    <form>
-        Administrator Log in<br>
-        Username: 
-        <input type="text" id="username"><br>
-        Password: 
-        <input type="text" id="password">
-        <button id="loginBtn">Log in</button>
-        <button id="logOutBtn">Log out</button>
-    </form>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi dignissimos cumque minima ducimus unde aut veniam in ipsam voluptatum aliquam temporibus, nemo, aliquid eius ea laudantium tempore accusantium natus! Neque.</p>
+    <div class="loginForm">
+        <form id="loginForm">
+            <header class="formHeader">Administrator Log in</header><br>
+            <label class="formContents">Username:</label> 
+            <input type="text" id="username"><br>
+            <label class="formContents">Password:</label> 
+            <input type="password" id="password">
+            <button id="loginBtn">Log in</button>
+            <button id="logOutBtn">Log out</button>
+        </form>
+    </div>
+    <div><img class="logo" src="logo.png"></div>
+    <div class="mainHeader">
+        <h1>Welcome to the New World Order Monday Night Knitting Circle!</h1>
+    </div>
+    <div id="introText">
+        <p>The time has come comrades; lay down your blades and grip your needles with the certainty of a warrior on
+             the battlefield. Let your loop-speed invoke terror in your adversaries as the floor stains red with the spilled wool of your vanquished foe.</p>
+    </div>
     <footer>@copy 2023. All rights reserved. Under the protection of The Intergalactic Needle and Wool Union.</footer>
 </body>
 </html>

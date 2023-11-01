@@ -26,6 +26,8 @@ public class MemberController {
 
     @PostMapping("/add-member/add")
     String addNewMember(@RequestParam("name") String name, @RequestParam("rank") String rank, @RequestParam("species") String species, @RequestParam("contact") String contact, Model model) {
+        if (rank == "")
+            rank = "Unknown";
         model.addAttribute("memberList", Group.members);
         model.addAttribute("newMember", new Member(null, null, null, null, 0));
         Group.addMember(name, rank, species, contact, Group.members.size() + 1);

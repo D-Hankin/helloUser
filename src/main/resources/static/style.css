@@ -1,19 +1,114 @@
-body {
+#body {
     background-image: url("eclipse.jpg");
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
+    color: white;
+    height: fit-content;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.menu {
+    width: 100%;
+    background-color:white;
+    text-align: right;
+}
+.mainHeader {
+    width: 100%;
+    background-color: black;
+}
+.formHeader{
+    padding-top: 1%;
+}
+.formContents {
+    padding-bottom: 1%;
 }
 h1 {
-    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
+    font-size: 300%;
 }
 table {
-    color: white;
     text-align: center;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-bottom: 10%;
+    background-color: black;
+}
+#tableContainer {
+    width: 50%;
+    margin: 5% 0 2% 25%;
+}
+th, td {
+    width: 10%;
+    padding: 0% 1% 0% 1%;
+    font-size: large;
 }
 #banner {
     width: 100%;
     margin: auto;
 }
-#logo {
-    
+#loginForm {
+    display: grid;
+    align-items: center;
+    width: 15%;
+    float: right;
+    margin-right: 2%;
+    margin-top: 1%;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 5px;
+}
+button {
+    margin-top: 4px;  
+}
+footer {
+    background-color: white;
+    text-align: center;
+    top: 95%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    color: black;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+.links {
+    text-decoration: underline;
+    color: black;
+    padding: 5px;
+    font-size: 150%;
+}
+#logOutBtnMembers {
+    width: 15%;
+    float: right;
+    margin-right: 1%;
+    margin-top: 1%;
+}
+#addNewMemberForm {
+    display: grid;
+    align-items: center;
+    width: 15%;
+    margin-right: 2%;
+    margin-top: 1%;
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 5px;
+}
+#addNewMemberFormContainer {
+    width: 100%;
+    margin-left: 43%;
+}
+#skullIconContainer {
+    background-color: white;
+    width: fit-content;
+    margin: auto;
+    padding-top: 2%;
+}
+#introText {
+    font-size: large;
+    max-width:100%;
+    padding: 1% 10% 1% 10%;
+    background-color: black;
+}
+select {
+    margin-bottom: 6%;
 }
