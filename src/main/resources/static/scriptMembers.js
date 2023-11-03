@@ -4,6 +4,7 @@ const noEntry = document.getElementsByClassName("noEntry");
 const logOutBtnMembers = document.getElementById("logOutBtnMembers");
 const removeBtn = document.getElementById("removeBtn");
 const scream = document.getElementById("scream");
+const addAction = document.getElementById("addNewMemberForm");
 
 if (username == "admin") {
     body.style.backgroundImage='url("demon.png")';
@@ -18,6 +19,8 @@ else {
     for (let i = 0; i < skullIcon.length; i++) {
         skullIcon[i].src = "";
     }
+    addAction.action="";
+
 }
 
 logOutBtnMembers.addEventListener("click", function() {
@@ -25,7 +28,3 @@ logOutBtnMembers.addEventListener("click", function() {
     location.replace(location.href="/");
 })
 
-removeBtn.addEventListener("click", function() {
-    scream.play();
-    console.log("scream");
-})
