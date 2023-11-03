@@ -8,7 +8,9 @@ const body = document.getElementById("body");
 
 if (loggedInCheck != "adminadmin") {
     addMemberLink.style.display="none";
+    addMemberLink.href="";
     logOutBtn.disabled="true";
+
 }
 else {
     loginBtn.disabled="true";
