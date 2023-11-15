@@ -12,6 +12,12 @@ public class GroupController {
         Group.addMember("(Example) David", "Master of Yarn", "Human", "david@nwo.com", Group.members.size() + 100);
         Group.addMember("(Example) Scclarr", "Needle Ninja", "Reptilian", "Scream in fear", Group.members.size() + 101);
         Group.addMember("(Example) Scytale", "One Needle Short", "Tleilaxu", "Pray to The Prophet", Group.members.size() + 102);
+        Group.addMember("(Example) David", "Master of Yarn", "Human", "david@nwo.com", Group.members.size() + 100);
+        Group.addMember("(Example) Scclarr", "Needle Ninja", "Reptilian", "Scream in fear", Group.members.size() + 101);
+        Group.addMember("(Example) Scytale", "One Needle Short", "Tleilaxu", "Pray to The Prophet", Group.members.size() + 102);
+        Group.addMember("(Example) David", "Master of Yarn", "Human", "david@nwo.com", Group.members.size() + 100);
+        Group.addMember("(Example) Scclarr", "Needle Ninja", "Reptilian", "Scream in fear", Group.members.size() + 101);
+        Group.addMember("(Example) Scytale", "One Needle Short", "Tleilaxu", "Pray to The Prophet", Group.members.size() + 102);
     }
 
     @GetMapping("/")

@@ -40,7 +40,7 @@ public class MemberController {
     @GetMapping("/remove-member/{memberId}")
     String removeMember(@PathVariable int memberId) {
         Group.members.removeIf(member -> member.getId() == memberId);
-
+        
         return "redirect:/members";
     }
 

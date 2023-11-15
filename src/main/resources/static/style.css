@@ -1,8 +1,13 @@
 #body {
     background-image: url("eclipse.jpg");
-    background-repeat: repeat-y;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     color: white;
-    height: fit-content;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .menu {
@@ -62,14 +67,10 @@ button {
 footer {
     background-color: white;
     text-align: center;
-    top: 95%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: fixed;
     color: black;
     padding-bottom: 1%;
     padding-top: 1%;
+    margin-top: auto;
 }
 .links {
     text-decoration: underline;
